@@ -1,0 +1,215 @@
+body {
+  background-color: rgb(12, 5, 75);
+}
+
+
+/* Hero SVG Base Style */
+
+#wmc-hero-svg {
+  overflow: visible;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+  font-family: ArialRoundedMTBold, 'Arial Rounded MT Bold';
+}
+
+.cls-1,
+.cls-5 {
+  fill: #fcd203;
+}
+
+.cls-6 {
+  fill: #390096;
+}
+
+.cls-6,
+.cls-5,
+.cls-7,
+.cls-8,
+.cls-9 {
+  stroke-width: 0px;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.cls-10 {
+  letter-spacing: -.04em;
+}
+
+.cls-2,
+.cls-4 {
+  letter-spacing: 0em;
+}
+
+.cls-2,
+.cls-9 {
+  fill: #ff3c00;
+}
+
+.cls-11,
+.cls-12 {
+  letter-spacing: -.01em;
+}
+
+.cls-12,
+.cls-13,
+.cls-14,
+.cls-15 {
+  fill: #fff;
+  font-family: Archivo-Regular, Archivo;
+  cursor: default;
+}
+
+.cls-7,
+.cls-4 {
+  fill: #14d875;
+}
+
+.cls-16 {
+  font-size: 45px;
+}
+
+.cls-14 {
+  letter-spacing: 0em;
+}
+
+.cls-8,
+.cls-3 {
+  fill: #d26dfc;
+}
+
+.cls-15 {
+  letter-spacing: -.03em;
+}
+
+/* Hero SVG Animation Effects */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes yellow-fade {
+  0% {
+    fill: #390096;
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    fill: #fcd203;
+    transform: rotate(0);
+  }
+}
+
+@keyframes purple-fade {
+  0% {
+    fill: #390096;
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    fill: #d26dfc;
+    transform: rotate(0);
+  }
+}
+
+@keyframes red-fade {
+  0% {
+    fill: #390096;
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    fill: #ff3c00;
+    transform: rotate(0);
+  }
+}
+
+@keyframes green-fade {
+  0% {
+    fill: #390096;
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    fill: #14d875;
+    transform: rotate(0);
+  }
+}
+
+#hero-shapes {
+  animation: fade-in 3s;
+}
+
+#yellow-shapes * {
+  animation: yellow-fade 3s 0.5s backwards;
+}
+
+#purple-shapes * {
+  animation: purple-fade 3s 1s backwards;
+}
+
+#red-shapes * {
+  animation: red-fade 3s 1.5s backwards;
+}
+
+#green-shapes * {
+  animation: green-fade 3s 2s backwards;
+}
+
+/* Hero SVG Hover Effects */
+
+#shapes-lower {
+  transition: 0.6s all 0.2s;
+}
+
+#titles .cls-16 {
+  opacity: 0;
+  transition: 0.6s all 0s;
+}
+
+#yellow-shapes:hover~#shapes-lower,
+#purple-shapes:hover~#shapes-lower,
+#red-shapes:hover~#shapes-lower {
+  transform: translateY(120px);
+  transition: 0.6s all 0s;
+}
+
+#green-shapes:hover~#shapes-lower {
+  transform: translateY(70px);
+  transition: 0.6s all 0s;
+}
+
+#yellow-shapes:hover~#titles .cls-16:nth-of-type(1) {
+  opacity: 1;
+  transition: 0.6s all 0.2s;
+}
+
+#purple-shapes:hover~#titles .cls-16:nth-of-type(2) {
+  opacity: 1;
+  transition: 0.6s all 0.2s;
+}
+
+#red-shapes:hover~#titles .cls-16:nth-of-type(3) {
+  opacity: 1;
+  transition: 0.6s all 0.2s;
+}
+
+#green-shapes:hover~#titles .cls-16:nth-of-type(4) {
+  opacity: 1;
+  transition: 0.6s all 0.2s;
+}
+
+.cls-6:hover {
+  transform: rotate(180deg) scale(90%);
+}
